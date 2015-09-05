@@ -1,0 +1,18 @@
+[user]
+	email = racecarparts@gmail.com
+	name = Tom Wheeler
+[core]
+	excludesfile = /Users/twhee4/my-env/git-conf/gitignore_global
+	editor = nano
+[push]
+	default = simple
+[alias]
+	unstage = reset HEAD --
+	st = status
+	co = checkout
+	last = log -1 HEAD
+	br = branch
+	changes-in-commit = diff-tree --no-commit-id --name-only -r
+	grep-commits = "!sh -c \"git log --all --grep=$1\" "
+	commit-all = "!sh -c \"git add -A && git commit --edit\" "
+	diffy = "difftool --extcmd=\"colordiff -ydw\""
