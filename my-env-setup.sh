@@ -16,8 +16,8 @@ echo "*   Setting up the previous version caskroom"
 echo "*   Installing terminal apps via brew."
      brew install $BREW_APP_LIST
 echo "*   Now we'll install some binary apps: $CASK_APP_LIST"
-     #brew-cask install --force --appdir=/Applications $CASK_APP_LIST
-     brew-cask install --appdir=/Applications $CASK_APP_LIST
+     #brew cask install --force --appdir=/Applications $CASK_APP_LIST
+     brew cask install --appdir=/Applications $CASK_APP_LIST
 echo "*   Installing Java: $JAVA_VERSIONS"
      brew cask install $JAVA_VERSIONS
 echo "*   Done."
