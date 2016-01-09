@@ -1,10 +1,10 @@
 # Append commands to the bash command history file (~/.bash_history)
 # instead of overwriting it.
-shopt -s histappend 
+shopt -s histappend
 
 # Make some possibly destructive commands more interactive.
-#alias rm='rm -i'
-#alias rmf='rm'
+alias rm='rm -i'
+alias rmf='rm'
 alias mv='mv -i'
 alias cp='cp -i'
 

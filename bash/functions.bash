@@ -16,7 +16,7 @@ function java_set {
   elif [[ $1 == "8" ]]
     then
     export JAVA_HOME=`/usr/libexec/java_home -v 1.8`;
-    echo "Setting Java to version 7..."
+    echo "Setting Java to version 8..."
     echo "$JAVA_HOME"
   fi
 }
@@ -24,14 +24,16 @@ function java_set {
 function install_fonts {
   # Set source and target directories
   my_env_fonts_dir=$( cd "$( dirname "$0" )" && pwd )
-  find_command="find \"$my_env_fonts_dir\" \( -name '*.[o,t]tf' -or -name '*.pcf.gz' \) -type f -print0"
+  find_fonts_command="find -L \"$my_env_fonts_dir\" \( -name '*.[o,t]tf' -or -name '*.pcf.gz' \) -type f -print0"
 
   if [[ `uname` == 'Darwin' ]]; then
     font_dir="$HOME/Library/Fonts/my-env"
+    rm -Rf $font_dir
+    mkdir $font_dir
   fi
 
   # Copy all fonts to user fonts directory
-  eval $find_command | xargs -0 -I % cp "%" "$font_dir/"
+  eval $find_fonts_command | xargs -0 -I % cp "%" "$font_dir/"
 
   echo "  All fonts installed to $font_dir"
 }
@@ -92,7 +94,7 @@ function hideFiles() {
 }
 
 function setComputerName() {
-  sudo scutil --set ComputerName $0
-  sudo scutil --set LocalHostName $0
-  sudo scutil --set HostName $0
+  sudo scutil --set ComputerName $1
+  sudo scutil --set LocalHostName $1
+  sudo scutil --set HostName $1
 }

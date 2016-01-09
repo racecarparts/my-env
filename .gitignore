@@ -2,3 +2,5 @@ stats/
 .DS_Store
 conf/m2/repository
 conf/alfred2
+bash/private
+opt/fonts/private

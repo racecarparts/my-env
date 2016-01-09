@@ -19,7 +19,7 @@ PROMPT_COMMAND='history -a'
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 # source the bash global bash stuff
-for f in $MY_ENV_BASH/*; do source $f; done
+for f in $(find $MY_ENV_BASH -name '*.sh' -or -name '*.bash' ); do source $f; done
 
 # Sets JAVA_HOME
-java_set 7 $>/dev/null
+java_set 8 $>/dev/null
