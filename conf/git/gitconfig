@@ -16,3 +16,4 @@
 	grep-commits = "!sh -c \"git log --all --grep=$1\" "
 	commit-all = "!sh -c \"git add -A && git commit --edit\" "
 	diffy = "difftool --extcmd=\"colordiff -ydw\""
+	updatesubs = "!sh -c \"git submodule init && git submodule update && git submodule status\" "

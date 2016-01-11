@@ -64,6 +64,11 @@ echo "Install Fonts"
 echo "  Done."
 
 echo
+echo "Initialize Git Submodules"
+    git updatesubs
+echo "Done"
+
+echo
 echo
 echo "Setup complete. yay."
 echo
