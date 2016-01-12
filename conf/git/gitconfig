@@ -2,7 +2,7 @@
 	email = wheelertom@users.noreply.github.com
 	name = Tom Wheeler
 [core]
-	excludesfile = /Users/twhee4/my-env/git-conf/gitignore_global
+	excludesfile = ~/my-env/conf/git/gitignore_global
 	editor = nano
 [push]
 	default = simple

@@ -1,8 +1,6 @@
 [submodule "opt/submodules/solarized"]
 	path = opt/submodules/solarized
 	url = git@github.com:altercation/solarized.git
-	ignore = dirty
 [submodule "opt/submodules/intellij-colors-solarized"]
 	path = opt/submodules/intellij-colors-solarized
 	url = git@github.com:jkaving/intellij-colors-solarized.git
-	ignore = dirty
