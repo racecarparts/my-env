@@ -1,5 +1,9 @@
 stats/
 .DS_Store
 conf/m2/repository
+conf/gradle/*
 conf/alfred2
 private
+
+#except
+!conf/gradle/gradle.properties
