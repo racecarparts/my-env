@@ -1,7 +1,7 @@
 #!/bin/bash
 
-CASK_APP_LIST="macdown atom alfred iterm2 google-chrome intellij-idea-ce"
-BREW_APP_LIST="colordiff tree homebrew/versions/maven31 gradle groovy"
+CASK_APP_LIST="macdown atom alfred iterm2 google-chrome firefox intellij-idea-ce virtualbox vagrant postgres"
+BREW_APP_LIST="colordiff tree homebrew/versions/maven31 gradle groovy jmeter node npm rbenv"
 JAVA_VERSIONS="java java7"
 
 # create symlinks for system settings
@@ -61,7 +61,7 @@ echo "  Done."
 
 echo
 echo "Install Fonts"
-# Add the custom fonts
+    # Add the custom fonts
     install_fonts ~/my-env/opt/fonts
 echo "  Done."
 

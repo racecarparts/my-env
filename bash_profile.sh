@@ -5,6 +5,7 @@ MY_ENV_RUBY=~/my-env/ruby
 MY_ENV_GIT_CONF=~/my-env/conf/git
 MY_DEVELOPMENT_FOLDER=~/wrk
 MY_SANDBOX_FOLDER=~/wrk/sandbox
+RUBY_RBENV_VERSION=2.3.0
 
 # Enable programmable completion features.
 if [ -f /etc/bash_completion ]; then
@@ -23,3 +24,6 @@ for f in $(find -L $MY_ENV_BASH -name '*.sh' -or -name '*.bash' ); do source $f;
 
 # Sets JAVA_HOME
 java_set 8 $>/dev/null
+
+# Sets Ruby version
+rbenv global $RUBY_RBENV_VERSION
