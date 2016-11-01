@@ -1,8 +1,9 @@
 #!/bin/bash
 
-CASK_APP_LIST="macdown atom alfred iterm2 google-chrome firefox intellij-idea-ce virtualbox vagrant postgres"
-BREW_APP_LIST="colordiff tree homebrew/versions/maven31 gradle groovy jmeter node npm rbenv"
+CASK_APP_LIST="macdown atom alfred iterm2 google-chrome firefox virtualbox vagrant postgres"
+BREW_APP_LIST="colordiff tree homebrew/versions/maven31 gradle groovy jmeter node npm rbenv gcal"
 JAVA_VERSIONS="java java7"
+NVM_VERSION="v0.32.1"
 
 # create symlinks for system settings
 echo
@@ -21,6 +22,8 @@ echo "*   Now we'll install some binary apps: $CASK_APP_LIST"
 echo "*   Installing Java: $JAVA_VERSIONS"
     #brew cask install --force $JAVA_VERSIONS
     brew cask install $JAVA_VERSIONS
+echo "*   Installing nvm"
+    curl -o- https://raw.githubusercontent.com/creationix/nvm/$NVM_VERSION/install.sh | bash
 echo "*   Done."
 
 echo

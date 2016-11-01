@@ -6,6 +6,7 @@ MY_ENV_GIT_CONF=~/my-env/conf/git
 MY_DEVELOPMENT_FOLDER=~/wrk
 MY_SANDBOX_FOLDER=~/wrk/sandbox
 RUBY_RBENV_VERSION=2.3.0
+NODE_VERSION=6.1.0
 
 # Enable programmable completion features.
 if [ -f /etc/bash_completion ]; then
@@ -27,3 +28,14 @@ java_set 8 $>/dev/null
 
 # Sets Ruby version
 rbenv global $RUBY_RBENV_VERSION
+
+export NVM_DIR="/Users/tom/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+# Sets the node version
+nvm use $NODE_VERSION > /dev/null
+
+# bash_completion
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+    . $(brew --prefix)/etc/bash_completion
+fi

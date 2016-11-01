@@ -98,3 +98,7 @@ function setComputerName() {
   sudo scutil --set LocalHostName $1;
   sudo scutil --set HostName $1;
 }
+
+function kill_dock() {
+    killall -KILL Dock
+}

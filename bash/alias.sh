@@ -12,6 +12,9 @@ alias cp='cp -i'
 alias ll='ls -aGop'
 alias ls='ls -F'
 
+# Changes `cal` to `gcal` - highlights today's date and other stuff
+alias cal='gcal'
+
 alias android-debug='adb forward tcp:9222 localabstract:chrome_devtools_remote'
 
 alias currentConnections='lsof -i | grep -E "(LISTEN|ESTABLISHED)"'
@@ -26,7 +29,7 @@ alias mvn_clean_install_4503_no_test='mvn clean install -Pinstall-all -Dsling.po
 alias mvn_clean_install_4503_no_test_offline='mvn -o clean install -Pinstall-all -Dsling.port=4503 -Dmaven.test.skip=true'
 
 # PostgreSQL psql command line tool for localhost
-alias psql='/Applications/Postgres.app/Contents/Versions/9.3/bin/psql -h localhost'
+alias psql='/Applications/Postgres.app/Contents/Versions/9.5/bin/psql -h localhost'
 
 #### Activator / Play Framework ####
 alias play='activator "run 9001"'
